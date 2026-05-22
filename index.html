@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>warriorfirm.id</title>
-
+<link rel="icon" type="image/png" href="https://blogger.googleusercontent.com/img/a/AVvXsEjOL9fdRr4PE4DPhFVuCqHU-eoGYKvA0T4ga3Weq47yo8PrmW5A69ZD5Zrz32o5TviFOBwOIULrFlN0sqroSzZr4OKWz4oHOzdAGWSfLkstpxlzoemVxmt0inBCgdLFNosRDgrxsgiixoJ54_JMJ6b95T5TNNc1yJ5tPDSAz3Bx_oSC6H-mr9YAAuo8skIz">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;900&display=swap" rel="stylesheet">
 
@@ -50,7 +50,22 @@
       font-weight:900;
       letter-spacing:2px;
     }
+.logo{
+  display:flex;
+  align-items:center;
+  gap:12px;
 
+  color:#FFD700;
+  font-size:28px;
+  font-weight:900;
+  letter-spacing:2px;
+}
+
+.logo img{
+  width:45px;
+  height:45px;
+  object-fit:contain;
+}
     .menu{
       display:flex;
       gap:25px;
@@ -94,7 +109,7 @@
       padding:0 10%;
       background:
       linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.8)),
-      url('https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?q=80&w=1600&auto=format&fit=crop') center/cover;
+      url('https://blogger.googleusercontent.com/img/a/AVvXsEhqR8mMmrTmGWu66xJ2WGe80Tj_BmAcVTYsgnbTV5FmUg58W8m0Rh-vqI27tocJariX-kLFA0SbZKrUJW42pvUqxJDBFfKgO8_03PCMnAfhMYHPJmHPyDDGYR09GehM_huB8911sijpb24Wr_f793xYMXgYJHuEpTzQvXSW4x3w43lYUb1Oownxp9wsO-Tm') center/cover;
     }
 
     .hero-content h1{
@@ -104,7 +119,51 @@
       letter-spacing:4px;
       margin-bottom:20px;
     }
+/* ANIMATED TITLE */
 
+.animated-title{
+
+  animation:
+  glow 2s ease-in-out infinite alternate,
+  floatText 3s ease-in-out infinite;
+
+}
+
+/* EFEK GLOW */
+
+@keyframes glow{
+
+  from{
+    text-shadow:
+    0 0 5px rgba(255,215,0,0.3),
+    0 0 10px rgba(255,215,0,0.3);
+  }
+
+  to{
+    text-shadow:
+    0 0 15px rgba(255,215,0,0.8),
+    0 0 35px rgba(255,215,0,0.6);
+  }
+
+}
+
+/* EFEK NAIK TURUN */
+
+@keyframes floatText{
+
+  0%{
+    transform:translateY(0px);
+  }
+
+  50%{
+    transform:translateY(-8px);
+  }
+
+  100%{
+    transform:translateY(0px);
+  }
+
+}
     .hero-content p{
       max-width:750px;
       margin:auto;
@@ -256,6 +315,22 @@
       }
 
     }
+/* BACKGROUND PRODUCT SECTION */
+
+.product-section{
+
+  position:relative;
+
+  background:
+  linear-gradient(rgba(0,0,0,0.88), rgba(0,0,0,0.92)),
+  url('https://blogger.googleusercontent.com/img/a/AVvXsEhqR8mMmrTmGWu66xJ2WGe80Tj_BmAcVTYsgnbTV5FmUg58W8m0Rh-vqI27tocJariX-kLFA0SbZKrUJW42pvUqxJDBFfKgO8_03PCMnAfhMYHPJmHPyDDGYR09GehM_huB8911sijpb24Wr_f793xYMXgYJHuEpTzQvXSW4x3w43lYUb1Oownxp9wsO-Tm');
+
+  background-size:cover;
+  background-position:center;
+  background-repeat:no-repeat;
+
+  overflow:hidden;
+}
 
   </style>
 </head>
@@ -265,9 +340,14 @@
 
   <nav>
 
-    <div class="logo">
-      WARRIORFIRM.ID
-    </div>
+<a href="https://instagram.com/warriorfirm.id" class="logo" target="_blank">
+
+  <img src="https://blogger.googleusercontent.com/img/a/AVvXsEjOL9fdRr4PE4DPhFVuCqHU-eoGYKvA0T4ga3Weq47yo8PrmW5A69ZD5Zrz32o5TviFOBwOIULrFlN0sqroSzZr4OKWz4oHOzdAGWSfLkstpxlzoemVxmt0inBCgdLFNosRDgrxsgiixoJ54_JMJ6b95T5TNNc1yJ5tPDSAz3Bx_oSC6H-mr9YAAuo8skIz" alt="logo">
+
+  <span>WARRIORFIRM.ID</span>
+
+</a>
+</div>
 
     <div class="menu">
       <a href="#home">Home</a>
@@ -283,10 +363,12 @@
 
     <div class="hero-content">
 
-      <h1>WARRIORFIRM.ID</h1>
+<h1 class="animated-title">
+  WARRIORFIRM.ID
+</h1>
 
       <p>
-        Casual streetwear brand dengan nuansa luxury,
+        Local brand dengan nuansa casual football,
         elegant, dan modern. Menyediakan T-Shirt,
         Hoodie, Crewneck, dan Cagoule dengan style premium.
       </p>
@@ -298,114 +380,115 @@
     </div>
 
   </section>
-
+<hr>
   <!-- PRODUCT / ARTIKEL -->
 
-  <section id="artikel">
+<section id="artikel" class="product-section">
 
-    <div class="section-title">
+  <div class="section-title">
 
-      <h2>OUR PRODUCT</h2>
+    <h2>OUR PRODUCT</h2>
 
-      <p>
-        Collection by warriorfirm.id
-      </p>
+    <p>
+      Collection by warriorfirm.id
+    </p>
 
-    </div>
+  </div>
 
-    <div class="product-grid">
+  <div class="product-grid">
 
-      <!-- PRODUCT 1 -->
+    <!-- PRODUCT 1 -->
 
-      <div class="product-card">
+    <div class="product-card">
 
-        <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?q=80&w=1000&auto=format&fit=crop">
+      <img src="https://blogger.googleusercontent.com/img/a/AVvXsEg7P_yGzO_mtq4awcVSGVnCxoQez4slrIVBUsUjREiT7lGjE0XkjBrNDd55GQcc1vMhvF0p4FD9EaZJBxMVUyFTN6rJSmnqYukSxvQhJZEtnmw73saeP6fGhrsF2XwWnnq3D7abAlhjezti3jSBieLbE9ac8ZxaUFDFhWhFVINXfChbTVnve1899LXKxVOg">
 
-        <div class="product-info">
+      <div class="product-info">
 
-          <h3>Warrior T-Shirt</h3>
+        <h3>Warrior T-Shirt</h3>
 
-          <p>
-            Premium oversized t-shirt dengan desain casual luxury streetwear.
-          </p>
+        <p>
+          Premium oversized t-shirt dengan desain casual luxury streetwear.
+        </p>
 
-          <a href="https://wa.me/6281234567890" class="btn">
-            Order Now
-          </a>
-
-        </div>
-
-      </div>
-
-      <!-- PRODUCT 2 -->
-
-      <div class="product-card">
-
-        <img src="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?q=80&w=1000&auto=format&fit=crop">
-
-        <div class="product-info">
-
-          <h3>Warrior Hoodie</h3>
-
-          <p>
-            Hoodie premium black edition dengan style clean dan elegant.
-          </p>
-
-          <a href="https://wa.me/6281234567890" class="btn">
-            Order Now
-          </a>
-
-        </div>
-
-      </div>
-
-      <!-- PRODUCT 3 -->
-
-      <div class="product-card">
-
-        <img src="https://images.unsplash.com/photo-1523398002811-999ca8dec234?q=80&w=1000&auto=format&fit=crop">
-
-        <div class="product-info">
-
-          <h3>Warrior Crewneck</h3>
-
-          <p>
-            Crewneck casual modern dengan kombinasi warna black & gold.
-          </p>
-
-          <a href="https://wa.me/6281234567890" class="btn">
-            Order Now
-          </a>
-
-        </div>
-
-      </div>
-
-      <!-- PRODUCT 4 -->
-
-      <div class="product-card">
-
-        <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?q=80&w=1000&auto=format&fit=crop">
-
-        <div class="product-info">
-
-          <h3>Warrior Cagoule</h3>
-
-          <p>
-            Cagoule outerwear dengan tampilan urban dan luxury street style.
-          </p>
-
-          <a href="https://wa.me/6281234567890" class="btn">
-            Order Now
-          </a>
-
-        </div>
+        <a href="https://wa.me/6281936812532" class="btn">
+          Order Now
+        </a>
 
       </div>
 
     </div>
 
-  </section>
+    <!-- PRODUCT 2 -->
+
+    <div class="product-card">
+
+      <img src="https://blogger.googleusercontent.com/img/a/AVvXsEhdcwYIXPLoIs5FaO3_bXGDmGAeGbWFzMH37p6LOucDJlrvcDyXaOiDrnVUX3Nr5V18bHzOE3EuaVSSAjHes3eeXMfHy2iRCH3r6ePrVFh8e4fG-SpFsVQV0l1lYFvtEeMzivE_AexzyLJL0Mhn5huIdbfffWkJrs_2SoSG09rUI0eiLV4Cph2E_cp13rMX">
+
+      <div class="product-info">
+
+        <h3>Warrior Hoodie</h3>
+
+        <p>
+          Hoodie premium black edition dengan style clean dan elegant.
+        </p>
+
+        <a href="https://wa.me/6281936812532" class="btn">
+          Order Now
+        </a>
+
+      </div>
+
+    </div>
+
+    <!-- PRODUCT 3 -->
+
+    <div class="product-card">
+
+      <img src="https://blogger.googleusercontent.com/img/a/AVvXsEgUk_TVbnY1LusOQLzIwelJRD-3lc-IIBzJTtNPH4LZiZj8A00JdwLKX1RH3IvEdyVzNGGNY95Sp55_njYUGgJk3ZIKY24XDNnQHVMmQGA3ucWIuRSKWyodREAK73B-4R5oxEbKTxjyGJLWzuALEl-w5-L1kan3LiOopQACdynMp1GyxElegMe1CNx4rhVV">
+
+      <div class="product-info">
+
+        <h3>Warrior Crewneck</h3>
+
+        <p>
+          Crewneck casual modern dengan kombinasi warna black & gold.
+        </p>
+
+        <a href="https://wa.me/6281936812532" class="btn">
+          Order Now
+        </a>
+
+      </div>
+
+    </div>
+
+    <!-- PRODUCT 4 -->
+
+    <div class="product-card">
+
+      <img src="https://blogger.googleusercontent.com/img/a/AVvXsEhPXENQQhBAlCrDTqUTfmKcl2j_OC3R5eof1mkcTQk0pzBjWP-9OKf-M01aNKssKppmxhg-mRFGlOrqTCRpkxD6_78-BeDZbRz0Jkg40p5bgZAaMo_ZIYpAO9mhtRCkgdkBrMQWOqJoeXuxJmfcn3WHRw3-02zOgQRqAyb3JyjF4TglsbVlZAJENddeBBUR">
+
+      <div class="product-info">
+
+        <h3>Warrior Cagoule</h3>
+
+        <p>
+          Cagoule outerwear dengan tampilan urban dan luxury street style.
+        </p>
+
+        <a href="https://wa.me/6281936812532" class="btn">
+          Order Now
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+<hr>
 
   <!-- CONTACT -->
 
@@ -423,7 +506,7 @@
 
     <div class="social-buttons">
 
-      <a href="https://wa.me/6281234567890" target="_blank">
+      <a href="https://wa.me/6281936812532" target="_blank">
         WhatsApp
       </a>
 
@@ -431,7 +514,7 @@
         Instagram
       </a>
 
-      <a href="https://facebook.com/warriorfirm.id" target="_blank">
+      <a href="https://facebook.com/hendrad.moko.99" target="_blank">
         Facebook
       </a>
 
